@@ -30,12 +30,17 @@ def plot_ifs(xy, transform, title):
     plt.savefig('images/{}'.format(fname), bbox_inches='tight')
 
 
-def main():
+def load_transforms():
     barnsley = np.loadtxt('transforms/barnsley.csv')
     von_koch = np.loadtxt('transforms/von_koch.csv')
     crystal = np.loadtxt('transforms/crystal.csv')
 
     transforms = [barnsley, von_koch, crystal]
+    return transforms
+
+
+def main():
+    transforms = load_transforms()
     titles = ['Barnsley', 'von Koch', 'Crystal']
 
     for transform, title in zip(transforms, titles):
