@@ -1,8 +1,7 @@
 ## Iterated function systems
 
-Here we construct fractals using a naive
-implementation of iterated function systems.
+Here we use iterated function systems to
+construct fractals.
 
 ![Barnsley fern](./images/barnsley.gif)
 ![von Koch](./images/von_koch.gif)
-![Crystal](./images/crystal.gif)

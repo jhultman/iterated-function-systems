@@ -24,9 +24,7 @@ def ifs(x0, y0, transforms, num_iters):
 def load_transforms():
     barnsley = np.loadtxt('../transforms/barnsley.csv')
     von_koch = np.loadtxt('../transforms/von_koch.csv')
-    crystal = np.loadtxt('../transforms/crystal.csv')
-
-    transforms = [barnsley, von_koch, crystal]
+    transforms = [barnsley, von_koch]
     return transforms
 
 
@@ -38,8 +36,8 @@ def get_savepath(title):
 
 def main():
     transforms = load_transforms()
-    titles = ['Barnsley', 'von Koch', 'Crystal']
-    N = [3000, 2000, 2000]
+    titles = ['Barnsley', 'von Koch']
+    N = [3000, 2000]
 
     for transform, title, n in zip(transforms, titles, N):
         xy = ifs(0, 0, transform, n)
